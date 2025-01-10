@@ -4,7 +4,7 @@ import { FiX } from "react-icons/fi";
 
 function Todo({ todo }) {
   return (
-    <div key={todo.id} className="list-item">
+    <div className="list-item">
       <span className="list-text">{todo.text}</span>
       <div className="button-group">
         <FiEdit style={{ color: "black" }} className="circle-btn" />

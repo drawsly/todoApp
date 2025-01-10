@@ -4,7 +4,7 @@ import "./TodoList.css";
 function TodoList({ todos }) {
   return (
     <div className="todolist-wrapper">
-      {todos && todos.map((todo) => <Todo todo={todo} />)}
+      {todos && todos.map((todo) => <Todo key={todo.id} todo={todo} />)}
     </div>
   );
 }
