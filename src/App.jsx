@@ -1,7 +1,15 @@
 import "./styles/App.css";
 import TodoCreate from "./components/TodoCreate/TodoCreate";
 import TodoList from "./components/TodoList/TodoList";
+import { useState } from "react";
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  const createTodo = (newTodo) => {
+    setTodos([...todos, newTodo]);
+  };
+
+  console.log(todos)
   return (
     <div className="container">
       <div className="todo-wrapper">
@@ -10,7 +18,7 @@ function App() {
           <p>Todolarınızı yönetebileceğiniz bir uygulama.</p>
         </div>
         <div className="todo-create">
-          <TodoCreate />
+          <TodoCreate onCreateTodo={createTodo} />
         </div>
         <div className="todo-list">
           <TodoList />
