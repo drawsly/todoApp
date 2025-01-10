@@ -9,6 +9,10 @@ function App() {
     setTodos([...todos, newTodo]);
   };
 
+  const deleteTodo = (todoId) => {
+    setTodos([...todos.filter((todo) => todo.id !== todoId)]);
+  };
+
   return (
     <div className="container">
       <div className="todo-wrapper">
@@ -20,7 +24,7 @@ function App() {
           <TodoCreate onCreateTodo={createTodo} />
         </div>
         <div className="todo-list">
-          <TodoList todos={todos} />
+          <TodoList onDeleteTodo={deleteTodo} todos={todos} />
         </div>
       </div>
     </div>
