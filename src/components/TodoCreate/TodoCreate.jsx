@@ -13,6 +13,7 @@ function TodoCreate({ onCreateTodo }) {
       text: newTodo,
     };
     onCreateTodo(request);
+    setNewTodo("");
   };
 
   return (
