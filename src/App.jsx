@@ -9,7 +9,6 @@ function App() {
     setTodos([...todos, newTodo]);
   };
 
-  console.log(todos)
   return (
     <div className="container">
       <div className="todo-wrapper">
@@ -21,8 +20,7 @@ function App() {
           <TodoCreate onCreateTodo={createTodo} />
         </div>
         <div className="todo-list">
-          <TodoList />
-          <TodoList />
+          <TodoList todos={todos} />
         </div>
       </div>
     </div>
