@@ -33,7 +33,7 @@
 }
 
 .circle-btn:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.445);
 }
