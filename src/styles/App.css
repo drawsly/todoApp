@@ -18,8 +18,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-
 }
 
 .container {
@@ -61,7 +59,6 @@ body {
   margin-bottom: 15px;
 }
 
-
 .todo-list {
   width: 100%;
   display: flex;
@@ -69,4 +66,35 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 15px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.692);
+  box-sizing: border-box;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #a36733a8;
+  box-shadow: 0 0 8px #a3673365;
+  outline: none;
+}
+
+button {
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.904);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.15s ease;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
