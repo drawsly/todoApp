@@ -13,6 +13,15 @@ function App() {
     setTodos([...todos.filter((todo) => todo.id !== todoId)]);
   };
 
+  const updateTodo = (newTodo) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id != newTodo.id) return todo;
+      return newTodo;
+    });
+
+    setTodos([...updatedTodos]);
+  };
+
   return (
     <div className="container">
       <div className="todo-wrapper">
@@ -24,7 +33,11 @@ function App() {
           <TodoCreate onCreateTodo={createTodo} />
         </div>
         <div className="todo-list">
-          <TodoList onDeleteTodo={deleteTodo} todos={todos} />
+          <TodoList
+            todos={todos}
+            onDeleteTodo={deleteTodo}
+            onUpdateTodo={updateTodo}
+          />
         </div>
       </div>
     </div>
