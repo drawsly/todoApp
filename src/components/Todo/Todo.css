@@ -38,3 +38,10 @@
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.445);
 }
+
+.edit-input {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  width: 100%;
+}
